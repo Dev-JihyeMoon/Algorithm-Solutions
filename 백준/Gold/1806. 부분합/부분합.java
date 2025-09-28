@@ -17,7 +17,7 @@ public class Main {
 		
 	}
 	
-	public static int getTwopointer(int[] arr, int s) {
+	public static int getTwopointer(int[] arr, int s) {// 마지막 요소가 유일하게 합을 넘을 경우를 고려해야 하기 때문에 start도 배열의 끝까지 체크가 끝난 후 종료
 		int start = 0, end = 0, answer = 100001;
 		long sum = arr[0];
 		final int len = arr.length-1;
