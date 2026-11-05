@@ -40,9 +40,9 @@ class Solution {
             }
             
             for(int d=0; d<4; d++){
-                int nx = x;
-                int ny = y;
-                
+                int nx = x, ny = y;
+              
+                // 벽에 부딧칠 때까지 이동
                 while(true){
                     int tx = nx + dx[d];
                     int ty = ny + dy[d];
