@@ -15,19 +15,21 @@ public class Solution {
 
         for (int t = 1; t <= T; t++) {
         	// 입력받기
-        	
         	String[] input = br.readLine().split(" ");
         	
         	int point = setPoint(input[0]);
         	int count = Integer.parseInt(input[1]);
         	
+        	// 소리가 안들렸다면 => 원래 자리 그대로 출력
         	if(count == 0) {
         		bw.write("#"+t+" "+point+"\n");
         		continue;
         	}
         	
+        	// 방울이 0, 2에 있다면 => 홀수면 1, 짝수면 0
         	int answer = count%2==0?0:1;
         	
+        	// 방울이 1에 있다면 => 홀수면 0, 짝수면 1
         	if(point==1) {
         		answer = count%2==0?1:0;
         	}
@@ -40,6 +42,7 @@ public class Solution {
         br.close();
     }
     
+    //지금 방울이 어디에 있는지
     public static int setPoint(String temp) {
     	int output=0;
     	
